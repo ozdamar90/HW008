@@ -17,27 +17,24 @@ private double yariCap;
     @Override
     public double getYaricap() {
 
-        return getYaricap();
+        return yariCap;
     }
 
     @Override
     public double alanHesapla() {
-        if (isKapaliMi() == false) {
-            return Math.PI * getYaricap() * getYaricap();
-        } else {
-            return 2 * Math.PI * getYaricap() * getYaricap() + 2 * Math.PI * getYaricap() * getYukseklik();
+        return isKapaliMi() == false?Math.PI * yariCap * yariCap:2 * Math.PI * yariCap* yariCap +
+                2 * Math.PI * yariCap * getYukseklik();
         }
 
-    }
 
     @Override
     public double hacimHesapla() {
-        return Math.PI * getYaricap() * getYaricap() * getYukseklik();
+        return Math.PI * yariCap * yariCap * getYukseklik();
     }
 
     @Override
     public String toString() {
 
-        return String.format(super.toString()+getYaricap()*getYukseklik());
+        return String.format(super.toString()+yariCap*getYukseklik());
     }
 }

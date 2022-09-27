@@ -6,7 +6,7 @@ public class Mobilya {
 
     public Mobilya(String aciklama, double yukseklik, boolean kapaliMi) {
         this.aciklama = aciklama;
-        this.setYukseklik(yukseklik);
+        setYukseklik(yukseklik);
         this.kapaliMi=kapaliMi;
     }
 

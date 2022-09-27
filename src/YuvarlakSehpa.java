@@ -22,24 +22,20 @@ public class YuvarlakSehpa extends Mobilya implements Daire {
 
     @Override
     public double hacimHesapla() {
-        return Math.PI*getYaricap()*getYaricap()*getYukseklik();
+        return Math.PI*yariCap*yariCap*getYukseklik();
     }
 
     @Override
     public double alanHesapla() {
-        if (isKapaliMi() == false) {
-            return Math.PI * getYaricap() * getYaricap();
-        } else {
-            return 2 * Math.PI * getYaricap() * getYaricap() + 2 * Math.PI * getYaricap() * getYukseklik();
+        return isKapaliMi() == false?Math.PI * yariCap * yariCap:2 * Math.PI * yariCap * yariCap +
+                2 * Math.PI * yariCap * getYukseklik();
         }
 
-
-    }
 
     @Override
     public String toString() {
 
-        return String.format(super.toString()+"Yari Cap: %5.2f Yükseklik : %5.2f",getYaricap(),getYukseklik());
+        return String.format(super.toString()+"Yari Cap: %5.2f Yükseklik : %5.2f",yariCap,getYukseklik());
 
 
     }

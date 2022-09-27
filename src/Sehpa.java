@@ -2,7 +2,7 @@ public class Sehpa extends Mobilya implements Dortgen {
 private double genislik;
 private double derinlik;
 
-    public Sehpa(String aciklama, double yukseklik, boolean kapaliMi, double genislik, double derinlik) {
+    public Sehpa(String aciklama, double yukseklik, double genislik, double derinlik, boolean kapaliMi) {
         super(aciklama, yukseklik, kapaliMi);
         this.genislik = genislik;
         this.derinlik = derinlik;
@@ -19,7 +19,7 @@ private double derinlik;
     @Override
     public double getGenislik() {
 
-        return getGenislik();
+        return genislik;
     }
 
     @Override
@@ -30,27 +30,25 @@ private double derinlik;
     @Override
     public double getDerinlik() {
 
-        return getDerinlik();
+        return derinlik;
     }
 
     @Override
     public double hacimHesapla() {
-        return getGenislik()*getDerinlik()*getYukseklik();
+        return genislik*derinlik*getYukseklik();
     }
 
     @Override
     public double alanHesapla() {
-        if (isKapaliMi() == false) {
-            return getGenislik() * getDerinlik();
-        } else {
-            return 6 * getGenislik() * getDerinlik();
-        }
+        return isKapaliMi() == false?genislik * derinlik:6 * genislik * derinlik;
 
     }
 
     @Override
     public String toString() {
 
-        return super.toString()+getGenislik()*getDerinlik()*getYukseklik();
+        return super.toString()+genislik*derinlik*getYukseklik();
     }
-}
+
+
+    }

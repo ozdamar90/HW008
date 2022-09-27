@@ -70,4 +70,4 @@ Lütfen uygun sınıf (class) ve arayüzleri (interface) tasarlayınız.
 	- sout(daire1);
 	- sout(daire1'in alanını gösteriniz);//unboxin gerekli mi?
 	- sout(daire1'in hacmini gösteriniz);//unboxing gerekli mi?
-	- Dortgen[] mobilyalar=new Dortgen[]{new Sehpa(),new Masa(), new YuvarlakSehpa()};//Doğru çalışıyor mu? Neden?
+	- Dortgen[] mobilyalar=new Dortgen[]{new Sehpa(),new Masa()};//Doğru çalışıyor mu? Neden?
